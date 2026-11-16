@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&duration=2600&pause=900&color=00FF41&background=0D1117&center=true&vCenter=true&width=900&height=70&lines=Hi%2C+I+am+Hangbin+%2F+cuihangbin%3BFlashInfer+Kernel+Engineering%3BCUDA+Kernel+Optimization%3BSGLang+%2F+vLLM+Inference+Optimization%3BFP8+Quantization+%26+Attention+Backends" alt="Hangbin — FlashInfer kernel engineering, CUDA optimization, SGLang and vLLM inference" />
+
+</div>
+
 # Hi, I'm Hangbin 👋
 
 I work on LLM inference infrastructure, with a focus on GPU kernels, attention backends, and quantization. My open-source work centers on **SGLang, FlashInfer, vLLM, and SageAttention**.
