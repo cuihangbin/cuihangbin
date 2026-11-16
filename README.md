@@ -1,8 +1,10 @@
 # Hi, I'm Hangbin 👋
 
-I work on LLM inference infrastructure, with a focus on GPU kernels, attention backends, and quantization. My open-source work centers on **FlashInfer, vLLM, and SageAttention**.
+I work on LLM inference infrastructure, with a focus on GPU kernels, attention backends, and quantization. My open-source work centers on **SGLang, FlashInfer, vLLM, and SageAttention**.
 
 ## What I work on
+
+- **SGLang:** Attention DP routing and load accounting, plus SM90 FA3 FP8 kernel performance and correctness.
 
 - **FlashInfer:** Gated DeltaNet (GDN) prefill kernels, SM120 CuTe backend development, and profiling.
 - **vLLM:** attention backend integration, FP8 quantization correctness, and DeepGEMM integration.
@@ -22,6 +24,18 @@ Selected upstream PRs. Status checked on **November 2, 2026**; follow the links 
 | vLLM | [#49928 — Keep DeepGEMM FP8 quantization inside an opaque op for TMA scales](https://github.com/vllm-project/vllm/pull/49928) | Open |
 
 The FlashInfer SM120 backend is experimental and explicitly selected. Its validation and performance results are scoped to the hardware and workloads documented in the PR.
+
+## SGLang contributions
+
+Status checked on **November 16, 2026**. Both PRs are open and have not been merged.
+
+| Upstream PR | Contribution | Development branch |
+| --- | --- | --- |
+| [SGLang #50088](https://github.com/sgl-project/sglang/pull/50088) | Count the unprefilled portion of chunked requests in `total_tokens` routing load. | [`fix/dp-total-tokens-chunked-req`](https://github.com/cuihangbin/sglang/tree/fix/dp-total-tokens-chunked-req) |
+| [sgl-flash-attn #55](https://github.com/sgl-project/sgl-flash-attn/pull/55) | Recover SM90 FA3 FP8 paged hdim256 performance with chunked two-level P@V accumulation while retaining the precision fix. | [`fp8-paged-hdim256-chunked-pv`](https://github.com/cuihangbin/sgl-flash-attn/tree/fp8-paged-hdim256-chunked-pv) |
+
+- **Reproducible DP routing benchmarks:** [scripts, commands, environment, and raw results](https://github.com/cuihangbin/sglang/tree/a7eaee3e39d831fb97c3fcf360e3c97bfb0d1f39/benchmark/dp_attention_routing). The benchmark material is maintained separately from the fix.
+- Validation uses H20 GPUs. Performance results and streaming-latency trade-offs are documented in the PRs; gains are specific to the tested workloads.
 
 ## Projects & profiling
 
