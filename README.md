@@ -33,12 +33,12 @@ The FlashInfer SM120 backend is experimental and explicitly selected. Its valida
 
 ## SGLang contributions
 
-Status checked on **November 16, 2026**. Both PRs are open and have not been merged.
+Status checked on **November 17, 2026**.
 
-| Upstream PR | Contribution | Development branch |
-| --- | --- | --- |
-| [SGLang #50088](https://github.com/sgl-project/sglang/pull/50088) | Count the unprefilled portion of chunked requests in `total_tokens` routing load. | [`fix/dp-total-tokens-chunked-req`](https://github.com/cuihangbin/sglang/tree/fix/dp-total-tokens-chunked-req) |
-| [sgl-flash-attn #55](https://github.com/sgl-project/sgl-flash-attn/pull/55) | Recover SM90 FA3 FP8 paged hdim256 performance with chunked two-level P@V accumulation while retaining the precision fix. | [`fp8-paged-hdim256-chunked-pv`](https://github.com/cuihangbin/sgl-flash-attn/tree/fp8-paged-hdim256-chunked-pv) |
+| Upstream PR | Contribution | Development branch | Status |
+| --- | --- | --- | --- |
+| [SGLang #50088](https://github.com/sgl-project/sglang/pull/50088) | Count the unprefilled portion of chunked requests in `total_tokens` routing load. | [`fix/dp-total-tokens-chunked-req`](https://github.com/cuihangbin/sglang/tree/fix/dp-total-tokens-chunked-req) | Open · Awaiting review |
+| [sgl-flash-attn #55](https://github.com/sgl-project/sgl-flash-attn/pull/55) | Recover SM90 FA3 FP8 paged hdim256 performance with chunked two-level P@V accumulation while retaining the precision fix. | [`fp8-paged-hdim256-chunked-pv`](https://github.com/cuihangbin/sgl-flash-attn/tree/fp8-paged-hdim256-chunked-pv) | [Merged into `sgl-kernel`](https://github.com/sgl-project/sgl-flash-attn/commit/a1f7f16c8f23a7eb2775febb265e4e7f275f7f93) |
 
 - **Reproducible DP routing benchmarks:** [scripts, commands, environment, and raw results](https://github.com/cuihangbin/sglang/tree/a7eaee3e39d831fb97c3fcf360e3c97bfb0d1f39/benchmark/dp_attention_routing). The benchmark material is maintained separately from the fix.
 - Validation uses H20 GPUs. Performance results and streaming-latency trade-offs are documented in the PRs; gains are specific to the tested workloads.
