@@ -19,19 +19,19 @@ I work on LLM inference infrastructure, with a focus on GPU kernels, attention b
 
 #### Frameworks
 
-| Project | Contribution |
-| --- | --- |
-| SGLang | Count the unprefilled portion of chunked requests in `total_tokens` routing load. [PR #50088](https://github.com/sgl-project/sglang/pull/50088) · [Development branch](https://github.com/cuihangbin/sglang/tree/fix/dp-total-tokens-chunked-req) · [Reproducible benchmarks](https://github.com/cuihangbin/sglang/tree/a7eaee3e39d831fb97c3fcf360e3c97bfb0d1f39/benchmark/dp_attention_routing). |
-| vLLM | [#55732 — SAGE_ATTN backend integration](https://github.com/vllm-project/vllm/pull/55732) |
-| vLLM | [#52753 — Pin the static FP8 quantization pattern to `group_shape=None`](https://github.com/vllm-project/vllm/pull/52753) |
-| vLLM | [#49928 — Keep DeepGEMM FP8 quantization inside an opaque op for TMA scales](https://github.com/vllm-project/vllm/pull/49928) |
+| Project | Contribution | Status |
+| --- | --- | --- |
+| SGLang | Count the unprefilled portion of chunked requests in `total_tokens` routing load. [PR #50088](https://github.com/sgl-project/sglang/pull/50088) · [Development branch](https://github.com/cuihangbin/sglang/tree/fix/dp-total-tokens-chunked-req) · [Reproducible benchmarks](https://github.com/cuihangbin/sglang/tree/a7eaee3e39d831fb97c3fcf360e3c97bfb0d1f39/benchmark/dp_attention_routing). | Open |
+| vLLM | [#55732 — SAGE_ATTN backend integration](https://github.com/vllm-project/vllm/pull/55732) | Open |
+| vLLM | [#52753 — Pin the static FP8 quantization pattern to `group_shape=None`](https://github.com/vllm-project/vllm/pull/52753) | Open |
+| vLLM | [#49928 — Keep DeepGEMM FP8 quantization inside an opaque op for TMA scales](https://github.com/vllm-project/vllm/pull/49928) | Open |
 
 #### Kernels
 
-| Project | Contribution |
-| --- | --- |
-| FlashInfer | [#6342 — Experimental SM120 CuTe GDN prefill backend](https://github.com/flashinfer-ai/flashinfer/pull/6342) |
-| SageAttention | [#402 — SM89/SM120 sequence lengths and paged KV decode for CUDA Graphs](https://github.com/thu-ml/SageAttention/pull/402) |
-| sgl-flash-attn | Recover SM90 FA3 FP8 paged hdim256 performance with chunked two-level P@V accumulation while retaining the precision fix. [PR #55](https://github.com/sgl-project/sgl-flash-attn/pull/55) · [Development branch](https://github.com/cuihangbin/sgl-flash-attn/tree/fp8-paged-hdim256-chunked-pv) · [Integration into `sgl-kernel`](https://github.com/sgl-project/sgl-flash-attn/commit/a1f7f16c8f23a7eb2775febb265e4e7f275f7f93). |
+| Project | Contribution | Status |
+| --- | --- | --- |
+| FlashInfer | [#6342 — Experimental SM120 CuTe GDN prefill backend](https://github.com/flashinfer-ai/flashinfer/pull/6342) | Merged |
+| SageAttention | [#402 — SM89/SM120 sequence lengths and paged KV decode for CUDA Graphs](https://github.com/thu-ml/SageAttention/pull/402) | Open |
+| sgl-flash-attn | Recover SM90 FA3 FP8 paged hdim256 performance with chunked two-level P@V accumulation while retaining the precision fix. [PR #55](https://github.com/sgl-project/sgl-flash-attn/pull/55) · [Development branch](https://github.com/cuihangbin/sgl-flash-attn/tree/fp8-paged-hdim256-chunked-pv) · [Integration into `sgl-kernel`](https://github.com/sgl-project/sgl-flash-attn/commit/a1f7f16c8f23a7eb2775febb265e4e7f275f7f93). | Merged |
 
 Validation and performance results are documented in the linked PRs and apply to their tested hardware and workloads.
