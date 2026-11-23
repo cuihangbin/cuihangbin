@@ -8,6 +8,12 @@
 
 I work on LLM inference infrastructure, with a focus on GPU kernels, attention backends, and quantization. My open-source work centers on **SGLang, FlashInfer, vLLM, and SageAttention**.
 
+### Featured upstream contributions
+
+<a href="https://github.com/sgl-project/sglang/pull/50088"><img src="https://avatars.githubusercontent.com/u/147780389?s=64&amp;v=4" width="24" height="24" alt="" /> <strong>SGLang #50088</strong></a> — DP routing load accounting for chunked prefill · Merged
+
+<a href="https://github.com/flashinfer-ai/flashinfer/pull/6342"><img src="https://avatars.githubusercontent.com/u/145061914?s=64&amp;v=4" width="24" height="24" alt="" /> <strong>FlashInfer #6342</strong></a> — Experimental SM120 CuTe GDN prefill backend · Merged
+
 ### ./current_work
 
 | Area | Current work |
