@@ -21,7 +21,7 @@ I work on LLM inference infrastructure, with a focus on GPU kernels, attention b
 
 | Project | Contribution | Status |
 | --- | --- | --- |
-| SGLang | Count the unprefilled portion of chunked requests in `total_tokens` routing load. [PR #50088](https://github.com/sgl-project/sglang/pull/50088) · [Development branch](https://github.com/cuihangbin/sglang/tree/fix/dp-total-tokens-chunked-req) · [Reproducible benchmarks](https://github.com/cuihangbin/sglang/tree/a7eaee3e39d831fb97c3fcf360e3c97bfb0d1f39/benchmark/dp_attention_routing). | Merged (2026-11-21) |
+| SGLang | Count the unprefilled portion of chunked requests in `total_tokens` routing load. [PR #50088](https://github.com/sgl-project/sglang/pull/50088) · [Development branch](https://github.com/cuihangbin/sglang/tree/fix/dp-total-tokens-chunked-req) · [Reproducible benchmarks](https://github.com/cuihangbin/sglang/tree/a7eaee3e39d831fb97c3fcf360e3c97bfb0d1f39/benchmark/dp_attention_routing). | Merged |
 | vLLM | [#55732 — SAGE_ATTN backend integration](https://github.com/vllm-project/vllm/pull/55732) | Open |
 | vLLM | [#52753 — Pin the static FP8 quantization pattern to `group_shape=None`](https://github.com/vllm-project/vllm/pull/52753) | Open |
 | vLLM | [#49928 — Keep DeepGEMM FP8 quantization inside an opaque op for TMA scales](https://github.com/vllm-project/vllm/pull/49928) | Open |
