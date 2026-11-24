@@ -1,6 +1,6 @@
 # DeepSeek-V4-Flash 的推理上下文并行系统设计
 
-[阅读演示文稿（PDF，14 页）](./DeepSeek-V4-Flash-CP.pdf)
+[逐页在线阅读（14 页）](./slides.md) · [下载原始 PDF](https://raw.githubusercontent.com/cuihangbin/cuihangbin/main/docs/deepseek-v4-flash-cp/DeepSeek-V4-Flash-CP.pdf)
 
 这份技术笔记用 SGLang 的四卡预填充示例，跟踪一个查询如何取得其他 GPU 上的 KV，以及跨卡通信如何影响长输入的首 token 延迟（TTFT）。
 
